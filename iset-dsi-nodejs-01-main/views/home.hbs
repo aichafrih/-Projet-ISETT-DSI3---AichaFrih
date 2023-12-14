@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #1d0507; /* Google Blue */
+    }
+    
+    .news-container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #e1d9d9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .news-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #efe0e0;
+        padding-bottom: 15px;
+    }
+    
+    .news-title {
+        color: #05142d; 
+    }
+    
+    .news-description {
+        color: #333333;
+    }
+    
+    .news-date {
+        color: #757575;
+        font-style: italic;
+    }
+    
+
+    .news-item:hover {
+        background-color: #f9f9f9;
+    }
+    </style>
+
+    
+    
+</head>
+<body>
+   
+    <h1>Latest News</h1>
+    {{#each news}}
+    <div class="news-container">
+        <div class="news-item">
+            <h2 class="news-title">{{titre}}</h2>
+            <p class="news-description">{{description}}</p>
+            <p class="news-date">Date: {{datepublication}}</p>
+        </div>
+
+       
+
+        
+
+    </div>
+ {{/each}}
+ 
+
+</body>
+</html>
